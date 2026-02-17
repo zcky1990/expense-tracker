@@ -197,13 +197,6 @@ export function ExpenseTracker() {
     loadData(accessToken, spreadsheetId, selectedMonth)
   }, [selectedMonth, accessToken, spreadsheetId])
 
-  const refreshExpenses = async () => {
-    if (!accessToken || !spreadsheetId) return
-    setLoading(true)
-    await loadData(accessToken, spreadsheetId, selectedMonth)
-    setLoading(false)
-  }
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!accessToken || !spreadsheetId) return
