@@ -1,4 +1,4 @@
-import { Wallet, Shield, Sheet, Sun, Moon } from "lucide-react"
+import { Wallet, Shield, Sheet } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
