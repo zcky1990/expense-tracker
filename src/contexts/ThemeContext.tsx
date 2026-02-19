@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react"
 
-const STORAGE_THEME = "expense_tracker_theme"
+const STORAGE_THEME = "theme"
 type Theme = "light" | "dark"
 
 type ThemeContextValue = {

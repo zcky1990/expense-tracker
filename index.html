@@ -11,4 +11,23 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
+  <script>
+    window.addEventListener('message', (event) => {
+    const { type, payload } = event.data || {};
+    if (type === 'THEME') {
+      console.log('Theme changed to', payload); // 'light' | 'dark'
+      document.documentElement.setAttribute('data-theme', payload);
+      if (payload === 'dark') {
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+    }
+    if (type === 'AUTH') {
+      console.log('Auth updated', payload); // user object or null
+    }
+  });
+  </script>
 </html>
