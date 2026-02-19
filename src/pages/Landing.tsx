@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { useAuth } from "@/contexts/AuthContext"
-import { useTheme } from "@/contexts/ThemeContext"
+// import { useTheme } from "@/contexts/ThemeContext"
 
 const FAQ_ITEMS = [
   {
@@ -18,7 +18,7 @@ const FAQ_ITEMS = [
 
 export function Landing() {
   const { signIn, error, clearError, isReady } = useAuth()
-  const { theme, toggleTheme } = useTheme()
+  // const { theme, toggleTheme } = useTheme()
 
   const handleSignIn = () => {
     clearError()
@@ -27,16 +27,6 @@ export function Landing() {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 flex flex-col items-center justify-center p-4">
-      <Button
-        type="button"
-        variant="ghost"
-        size="icon"
-        className="absolute top-4 right-4"
-        onClick={toggleTheme}
-        aria-label={theme === "dark" ? "Mode terang" : "Mode gelap"}
-      >
-        {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-      </Button>
       <div className="w-full max-w-4xl space-y-8 text-center">
         <div className="space-y-2">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4">
