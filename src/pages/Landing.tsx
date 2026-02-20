@@ -26,7 +26,7 @@ export function Landing() {
   }
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 flex flex-col items-center justify-center p-4">
+    <div className="relative min-h-screen bg-background flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-4xl space-y-8 text-center">
         <div className="space-y-2">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4">
